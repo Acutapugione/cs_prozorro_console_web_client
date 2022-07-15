@@ -1,10 +1,12 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Prozorro.Models.Structs
+namespace Prozorro.Models.Internals
 {
     [DataContract]
-    public struct Unit
+    public class Unit
     {
+        public int Id { get; set; }
+
         [DataMember(Name = "code")]
         public string Code { get; set; }
 

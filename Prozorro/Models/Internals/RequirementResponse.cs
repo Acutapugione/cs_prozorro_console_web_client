@@ -5,6 +5,8 @@ namespace Prozorro.Models.Internals;
 [DataContract]
 public class RequirementResponse
 {
+    public int Id { get; set; }
+
     [DataMember(Name = "requirement")]
     public string Requirement { get; set; }
 

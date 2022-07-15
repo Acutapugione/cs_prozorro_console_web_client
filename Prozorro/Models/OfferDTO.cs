@@ -1,7 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using Prozorro.Models.Enums;
 using Prozorro.Models.Internals;
-using Prozorro.Models.Structs;
 
 namespace Prozorro.Models;
 

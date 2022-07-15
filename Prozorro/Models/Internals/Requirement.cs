@@ -1,5 +1,4 @@
-﻿using Prozorro.Models.Structs;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace Prozorro.Models.Internals
 {
