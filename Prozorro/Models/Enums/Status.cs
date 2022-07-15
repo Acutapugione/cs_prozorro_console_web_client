@@ -13,6 +13,9 @@ namespace Prozorro.Models.Enums
         [DataMember(Name = "active")]
         Active,
         [DataMember(Name = "hidden")]
-        Hidden
+        Hidden,
+        [DataMember(Name = "general")]
+        General,
+
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Prozorro.Models.Structs;
 
 [DataContract]
-public struct OfferValue
+public struct Value
 {
     [DataMember(Name = "amount")]
     public decimal Amount { get; set; }

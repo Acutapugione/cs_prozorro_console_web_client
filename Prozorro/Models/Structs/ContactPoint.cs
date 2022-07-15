@@ -18,7 +18,7 @@ namespace Prozorro.Models.Structs
         public string Telephone { get; set; }
 
         [DataMember(Name = "url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
         [DataMember(Name = "email")]
         public string Email { get; set; }

@@ -40,7 +40,7 @@ namespace Prozorro.ClientExtentions
             return await _client.GetAsync<T>(type, param);
         }
 
-        public async Task<HashSet<BaseItemDTO>> LoadContainers( string typeName = "", int count = 0)
+        public async Task<HashSet<BaseItemDTO>> LoadIndexesByType( string typeName = "", int count = 0)
         {
             HashSet<BaseItemDTO> items = new();
             var startPoint = await this.GetBaseContainerDTOAsync<BaseContainerDTO<BaseItemDTO>>($"/api/{typeName}");
@@ -57,61 +57,75 @@ namespace Prozorro.ClientExtentions
                     }
                     catch (Exception ex)
                     {
-                        if(_isDebugging) Console.WriteLine(ex);
+                        if(_isDebugging) 
+                            Console.WriteLine(ex);
                     }
                 }
-                if (_isDebugging) Console.WriteLine(path);
+                if (_isDebugging) 
+                    Console.WriteLine($"Indexes {cntr+1}/{count} of {typeName} loaded...");
+
                 startPoint = await this.GetBaseContainerDTOAsync<BaseContainerDTO<BaseItemDTO>>(path);
+
                 if (path == startPoint.NextPage.Path)
                 {
                     break;
                 }
+
                 path = startPoint.NextPage.Path;
                 cntr++;
+
                 if (cntr >= count)
                 {
                     break;
                 }
                 if (cntr % 10 == 0)
                 {
-                    if (_isDebugging) Console.Clear();
+                    if (_isDebugging) 
+                        Console.Clear();
                 }
             }
             while (path != null);
-            if (_isDebugging) Console.Clear();
+            if (_isDebugging)
+                Console.WriteLine($"{items.Count} indexes of {typeName} was loaded successfully!");
+
             return items;
         }
 
-        public async Task<HashSet<T>> LoadObjects<T>( HashSet<BaseItemDTO> containers, string typeName = "", int count = 0)
+        public async Task<HashSet<T>> LoadObjectsByType<T>( HashSet<BaseItemDTO> containers, string typeName = "", int count = 0)
         {
             var list = containers.ToList();
 
-            HashSet<T> offers = new();
+            HashSet<T> itemSet = new();
             int cntr = 0;
             foreach (var item in containers)
             {
 
-                if (_isDebugging) Console.WriteLine($"Завантаження офферів {cntr}/{containers.Count}...");
+                if (_isDebugging) 
+                    Console.WriteLine($"Loading {cntr}/{Math.Min(containers.Count, count)} of {typeName}...");
+
                 var offer = await this.GetBaseContainerDTOAsync<T>($"/api/{typeName}/{item.Id}", "data");
 
-                offers.Add(offer);
+                itemSet.Add(offer);
 
                 cntr++;
-                if (cntr % 10 == 0)
+                if (cntr % 10 == 0 && _isDebugging == true)
                 {
-                    if (_isDebugging) Console.Clear();
+                    Console.Clear();
                 }
                 if (cntr >= count)
                 {
                     break;
                 }
             }
-            if (_isDebugging) Console.WriteLine($"Завантаження {offers.Count} офферів завершилось успішно.");
-            return offers;
+            if (_isDebugging) 
+                Console.WriteLine($"{itemSet.Count} objects of {typeName} was loaded successfully!");
+
+            return itemSet;
 
         }
 
-        
+
+
 
     }
 

@@ -4,8 +4,39 @@ using Prozorro.Models;
 using Prozorro.Models.Enums;
 using System.Text;
 
-ClientExecutor Client = new(Mode.Dev, "https://catalog-api-staging.prozorro.gov.ua");
+ClientExecutor Client = new(Mode.Prod, "https://catalog-api-staging.prozorro.gov.ua");
 Console.OutputEncoding = Encoding.UTF8;
 
-HashSet<BaseItemDTO> containers = await Client.LoadContainers(typeName: "offers", count: 100);
-HashSet<OfferDTO> offers = await Client.LoadObjects<OfferDTO>(containers, typeName: "offers", count: 100);
+await LoadItems<OfferDTO>(Client, "offers");
+
+await LoadItems<VendorDTO>(Client, "vendors");
+
+await LoadItems<CategoryDTO>(Client, "categories");
+
+await LoadItems<ProfileDTO>(Client, "profiles");
+
+await LoadItems<ProductDTO>(Client, "products");
+
+static async Task<HashSet<T>> LoadItems<T>(ClientExecutor client, string typeName = "products")
+{
+    try
+    {
+        HashSet<BaseItemDTO> indexes = await client
+            .LoadIndexesByType(
+            typeName: typeName,
+            count: 100);
+
+        var items = await client
+            .LoadObjectsByType<T>(
+            indexes,
+            typeName: typeName,
+            count: 100);
+
+        return items;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex);
+        return new();
+    }
+}

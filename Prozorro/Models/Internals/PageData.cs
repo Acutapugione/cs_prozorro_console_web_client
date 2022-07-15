@@ -1,9 +1,9 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Prozorro.Models;
+namespace Prozorro.Models.Internals;
 
 [DataContract]
-public class PageDataDTO
+public class PageData
 {
     [DataMember(Name = "offset")]
     public string Offset { get; set; }

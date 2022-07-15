@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using Prozorro.Models.Internals;
+using System.Runtime.Serialization;
 
 namespace Prozorro.Models
 {
@@ -18,9 +19,9 @@ namespace Prozorro.Models
         public List<T> Data { get; set; }
 
         [DataMember(Name = "next_page")]
-        public PageDataDTO? NextPage { get; set; }
+        public PageData? NextPage { get; set; }
 
         [DataMember(Name = "prev_page")]
-        public PageDataDTO? PrewPage { get; set; }
+        public PageData? PrewPage { get; set; }
     }
 }

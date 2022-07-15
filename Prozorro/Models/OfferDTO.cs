@@ -21,7 +21,7 @@ public class OfferDTO : BaseItemDTO
     public List<Supplier> Suppliers { get; set; } = new();
 
     [DataMember(Name = "value")]
-    public OfferValue Value { get; set; }
+    public Structs.Value Value { get; set; }
 
     [DataMember(Name = "minOrderValue")]
     public MinOrderValue? MinOrderValue { get; set; }
