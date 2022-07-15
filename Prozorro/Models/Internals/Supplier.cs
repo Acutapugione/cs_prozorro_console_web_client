@@ -1,5 +1,4 @@
-﻿using Prozorro.Models.Structs;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -11,6 +10,8 @@ namespace Prozorro.Models.Internals;
 [DataContract]
 public class Supplier
 {
+    public int Id { get; set; }
+
     [DataMember(Name = "name")]
     public string Name { get; set; }
     [DataMember(Name = "scale")]

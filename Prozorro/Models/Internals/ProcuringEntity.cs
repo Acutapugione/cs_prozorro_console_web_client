@@ -1,5 +1,4 @@
 ﻿using Prozorro.Models.Enums;
-using Prozorro.Models.Structs;
 using System.Runtime.Serialization;
 
 namespace Prozorro.Models.Internals;
@@ -7,6 +6,8 @@ namespace Prozorro.Models.Internals;
 [DataContract]
 public class ProcuringEntity
 {
+    public int Id { get; set; }
+
     [DataMember(Name = "address")]
     public DeliveryAddress Address { get; set; }
 
