@@ -19,7 +19,7 @@ public class CategoryDTO : BaseItemDTO
     public string Description { get; set; }
 
     [DataMember(Name = "images")]
-    public List<Image> Images { get; set; }
+    public List<Image> Images { get; set; } = new();
 
     [DataMember(Name = "procuringEntity")]
     public ProcuringEntity ProcuringEntity { get; set; }
@@ -29,6 +29,5 @@ public class CategoryDTO : BaseItemDTO
 
     [DataMember(Name = "title")]
     public string Title { get; set; }
-
 
 }

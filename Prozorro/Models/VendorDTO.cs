@@ -16,10 +16,10 @@ public class VendorDTO : BaseItemDTO
     public Vendor Vendor { get; set; }
 
     [DataMember(Name = "categories")]
-    public List<Category> Categories { get; set; } = new List<Category>();
+    public List<Category> Categories { get; set; } = new();
 
     [DataMember(Name = "documents")]
-    public List<Document> Documents { get; set; } = new List<Document>();
+    public List<Document> Documents { get; set; } = new();
 
     [DataMember(Name = "isActivated")]
     public bool IsActivated { get; set; } = false;

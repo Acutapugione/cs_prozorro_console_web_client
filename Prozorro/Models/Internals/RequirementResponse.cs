@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Prozorro.Models;
+namespace Prozorro.Models.Internals;
 
 [DataContract]
 public class RequirementResponse

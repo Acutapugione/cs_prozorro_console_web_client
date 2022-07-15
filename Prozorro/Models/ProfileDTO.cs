@@ -39,8 +39,3 @@ public class ProfileDTO : BaseItemDTO
     public Value Value { get; set; }
 
 }
-
-//public class OffersDTO : BaseContainerDTO<OfferDTO>
-//{
-
-//}

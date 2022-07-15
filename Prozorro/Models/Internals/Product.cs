@@ -1,13 +1,10 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Prozorro;
+namespace Prozorro.Models.Internals;
 
 [DataContract]
-public class Brand
+public class Product
 {
     [DataMember(Name = "name")]
     public string Name { get; set; }
-    
-    [DataMember(Name = "uri")]
-    public string? Uri { get; set; }
 }

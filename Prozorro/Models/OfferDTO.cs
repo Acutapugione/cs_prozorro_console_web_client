@@ -21,7 +21,7 @@ public class OfferDTO : BaseItemDTO
     public List<Supplier> Suppliers { get; set; } = new();
 
     [DataMember(Name = "value")]
-    public Structs.Value Value { get; set; }
+    public Value Value { get; set; }
 
     [DataMember(Name = "minOrderValue")]
     public MinOrderValue? MinOrderValue { get; set; }
@@ -31,9 +31,4 @@ public class OfferDTO : BaseItemDTO
 
     [DataMember(Name = "owner")]
     public string Owner { get; set; }
-}
-
-public class OffersDTO : BaseContainerDTO<OfferDTO>
-{
-
 }

@@ -47,6 +47,4 @@ public class ProductDTO : BaseItemDTO
 
     [DataMember(Name = "owner")]
     public string Owner { get; set; }
-
-
 }
