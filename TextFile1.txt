@@ -1,0 +1,700 @@
+Offer: 7ca89d56e8ed973b33948906a2873452
+Suppliers:
+
+	Identifier: Id: 40218897;
+Legal name: ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ "ЗЕТА-ТЕХНО";
+Scheme: UA-EDR
+_______________________________________
+Offer: d4bca718f83079871192575874dfdec9
+Suppliers:
+
+	Identifier: Id: 32490244;
+Legal name: ТОВ "Епіцентр К";
+Scheme: UA-EDR
+_______________________________________
+Offer: 4a058bb6991714d4bee0d3641b3d8153
+Suppliers:
+
+	Identifier: Id: 32490244;
+Legal name: ТОВ "Епіцентр К";
+Scheme: UA-EDR
+_______________________________________
+Offer: f30e50e51aa02763d3d6a9014f23d15a
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 91c14f95b9f5ed700b22cb78f5f3949f
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 22ca090f95c0a9293c4eec863f47c7b4
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 9d6245086130611f652f0bce4054fd5e
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 27602a014401611b5c561d8091d5ba81
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: fbfdf7c233ef56eefd9b7110117f9c93
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 30cc886a38d804db0d38cd018096193a
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 54b3e6a0c66764faa5492f3ea18f9935
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 905805b69545a7b7082bb3ee4b49c49a
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 5169ec127d65f7a63188a6d187132486
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 1e4ae8167b916780cd1728a32fa351aa
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: b14fd603bf901f22a6dacc8d7c08af7a
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 7798dddb64e25b79a79a23f3d71f083e
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 6d49ff0173782a9c6a8247563d763c48
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 55926f8732e8cb2dc5b71a00ead99600
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 9f1b58ae430fad51d6a124406d4f0b29
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 9ac898af9e1fc494ab92ffb04b058ae1
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 5dacec8e4fbc7db1b06b1ecdaf19d78a
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: b1b561d2eb2c83745bea58843593b4bd
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 95072338f5ab327fd9d21f96bddc350d
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 22c14fb8124cecd1803416e3d81b26d8
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 2cb4d25732c17ae5baa4ded2d19b5373
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: b91c289f07bc9780fc1890ffd005343a
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 039f63eaa7d103256c73333b5d891fc3
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 3e19d33c778a3b6347b595c6efb8766b
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: a311ffbf24de7bcb567dbd634b3ede56
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 594dc0b7cca44cd1cc53f661df048f09
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: e363bfaac62c71d5548136456a6cecdf
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 562610772b4b480c60d475ce67878f96
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 8e2a845e95f9850580518f2ed12d79fb
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________
+Offer: 3e1feeffe69ef319390ac47452a97e5f
+Suppliers:
+
+	Identifier: Id: 14236166;
+Legal name: Товариство з обмеженою відповідальністю «Виробничо-комерційна фірма «ВВ»;
+Scheme: UA-EDR
+_______________________________________
+Offer: e3caff2a117f6b9ec4f90e97ef29f39b
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 6fbdebbce586243a404959402428ed59
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: ba2d302c04e82306610f78d1badd5436
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: c344b20fd28509d68a3a3c81f098f2ce
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: d373d3ad921c28e908e2d4c8f15f7124
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 9d2dd3a2f917c8270875cc8cc6e6f17c
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 1ccb3cdd461e2fd36783854165c948cd
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: ddb1fb15d5168989f0c03c7efbc5965e
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: da02b56d9d540fde424a07a0f03b6486
+Suppliers:
+
+	Identifier: Id: 14236166;
+Legal name: Товариство з обмеженою відповідальністю «Виробничо-комерційна фірма «ВВ»;
+Scheme: UA-EDR
+_______________________________________
+Offer: e55db761a4a153ab8f80036a43b2d546
+Suppliers:
+
+	Identifier: Id: 14236166;
+Legal name: Товариство з обмеженою відповідальністю «Виробничо-комерційна фірма «ВВ»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 20b74fbe1f376f732091d7f49a64c47f
+Suppliers:
+
+	Identifier: Id: 38703681;
+Legal name: Товариство з обмеженою відповідальністю "ВАШ АВТОГРАФ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 756df792fe951dca11ac05893d4321ac
+Suppliers:
+
+	Identifier: Id: 32049199;
+Legal name: ТОВ Метро Кеш енд Кері Україна;
+Scheme: UA-EDR
+_______________________________________
+Offer: b6cc2a67e12337a757cc8ca7c50703b2
+Suppliers:
+
+	Identifier: Id: 32049199;
+Legal name: ТОВ Метро Кеш енд Кері Україна;
+Scheme: UA-EDR
+_______________________________________
+Offer: 62e399d61fb2bc5e99e33e91a500102c
+Suppliers:
+
+	Identifier: Id: 36469918;
+Legal name: Товариство з обмеженою відповідальністю «НРП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 71ecfd19a3a26c7e8d7aadcf45a53769
+Suppliers:
+
+	Identifier: Id: 36469918;
+Legal name: Товариство з обмеженою відповідальністю «НРП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: fe74c80d7a7118d0763c50f5fe68a985
+Suppliers:
+
+	Identifier: Id: 36469918;
+Legal name: Товариство з обмеженою відповідальністю «НРП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: beb57fc7f0d41d56041c695f6b7066f3
+Suppliers:
+
+	Identifier: Id: 38295925;
+Legal name: Товариство з обмеженою відповідальністю «ВИЛАЙН ГРУП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: d21cc6f5656ae9b8fe83711ef154e953
+Suppliers:
+
+	Identifier: Id: 36469918;
+Legal name: Товариство з обмеженою відповідальністю «НРП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 48441369488b8e4bd2039c9904675f7a
+Suppliers:
+
+	Identifier: Id: 36469918;
+Legal name: Товариство з обмеженою відповідальністю «НРП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: d69e09991c9bb4958ec1aef47b99e331
+Suppliers:
+
+	Identifier: Id: 38703681;
+Legal name: Товариство з обмеженою відповідальністю "ВАШ АВТОГРАФ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 0c3ba64775a5ed588c0b82ca47cb04b7
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: ecf2f5d2aca9690860a53f552505c9fb
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 09efdb95c38c55f0bd94b4702adf10dd
+Suppliers:
+
+	Identifier: Id: 38703681;
+Legal name: Товариство з обмеженою відповідальністю "ВАШ АВТОГРАФ";
+Scheme: UA-EDR
+_______________________________________
+Offer: b98f25d85561ab2087c2f094e5384e01
+Suppliers:
+
+	Identifier: Id: 38615936;
+Legal name: ТОВ "Гепард Ойл";
+Scheme: UA-EDR
+_______________________________________
+Offer: 187b44a2d9ea08b9fe497814e129438f
+Suppliers:
+
+	Identifier: Id: 38615936;
+Legal name: ТОВ "Гепард Ойл";
+Scheme: UA-EDR
+_______________________________________
+Offer: a4d890bfbb18db067b78d732857e5dd8
+Suppliers:
+
+	Identifier: Id: 14236166;
+Legal name: Товариство з обмеженою відповідальністю «Виробничо-комерційна фірма «ВВ»;
+Scheme: UA-EDR
+_______________________________________
+Offer: dc144e30d11bdb60115b8cb2fd4f64be
+Suppliers:
+
+	Identifier: Id: 14236166;
+Legal name: Товариство з обмеженою відповідальністю «Виробничо-комерційна фірма «ВВ»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 9f4241bb2cb6e9415072b6643633b0ad
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 3551d2e20ed5018af8f1b0f436577379
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: b55580d5672a043f18f4755fd75119ef
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 691bc2260ffdcf8ca47d39c89bb35678
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: cc21c21106171224130d6393e10957a5
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 0df1f00a76e71ec663445bffd68df191
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 31aa42cf7c7316b8e863145464fbca6f
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: f2ee12a8f7753209b0629ae8243ccf0d
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 9ff8d0cf24d0edeab896149d960fab15
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: d72276799c4f59bb1f66eae708358200
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 80cc0db2a7ce70d28e3892fe728d8c75
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 32812f4e4af59c207965be46c1b62326
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 0d5337502e8b780ed38d6138cdc5e732
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 3ad7170e49a69b98435996e7cc12293a
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 9fd1ac1a457d8e33ac23b8dfac981c91
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: b235262a9d48239e10f70925a0e1a287
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: a41e72e8d15b2ca4297aa7772a3b4f85
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 5af0e25cc9fd43a455d4fd9f687848b3
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 346beea71ed744caa780ac17d2fb1267
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: ec2d0a187a98a8e7c3c803e0d5065220
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 12c36d93831079b8b26425df34c44f63
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: bba598c9258ce6992c10e52ac1e0e245
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 428cc3e3d4d2861d46d982477862b7e3
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: c7c14bc2b2d518734fd36234bb2d9bb1
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 111888caa134f7a55212fb10f48d2435
+Suppliers:
+
+	Identifier: Id: 32881326;
+Legal name: Приватне підприємство «Комтехсервіс»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 82c0955b948b5f836d7bf85f95e1054a
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 55473d05f80a5a966b7f2687ec389deb
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 13c8d8785912c4b7ee02d537b872fc62
+Suppliers:
+
+	Identifier: Id: 41449359;
+Legal name: ТОВ "ЛІВАЙН ТОРГ";
+Scheme: UA-EDR
+_______________________________________
+Offer: c4f66574b357037040a35feef376ba9b
+Suppliers:
+
+	Identifier: Id: 41449359;
+Legal name: ТОВ "ЛІВАЙН ТОРГ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 2e0f121b6e647562d38daf66b101fa6f
+Suppliers:
+
+	Identifier: Id: 41449359;
+Legal name: ТОВ "ЛІВАЙН ТОРГ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 19296db5c215c9957779a9f8bf79369c
+Suppliers:
+
+	Identifier: Id: 39189678;
+Legal name: Товариство з обмеженою відповідальністю «ГЛОБАЛ ІНТЕГРЕЙШН ГРУП»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 6dacb83a5fa0e7868d7e7be79d004653
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 875b1b3819599952418ea57a7c8238e5
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: e4590efc76b287c04b32be795f5412ff
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 0c40f10f8b7ea1a760484d527ea4c029
+Suppliers:
+
+	Identifier: Id: 40989803;
+Legal name: ТОВ "МАГАЗИН ПОЗИТИВ";
+Scheme: UA-EDR
+_______________________________________
+Offer: 7fbd2b57417fdeeee692fa8032324408
+Suppliers:
+
+	Identifier: Id: 37646151;
+Legal name: ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ "ЕКСПЕРТ СЕРВІС-Т";
+Scheme: UA-EDR
+_______________________________________
+Offer: 905fa89caec032319cfb7e4c9ceb9d7b
+Suppliers:
+
+	Identifier: Id: 37646151;
+Legal name: ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ "ЕКСПЕРТ СЕРВІС-Т";
+Scheme: UA-EDR
+_______________________________________
+Offer: 45bcb48528c34212ba7a9c2bc1b985e2
+Suppliers:
+
+	Identifier: Id: 35636178;
+Legal name: Товариство з обмеженою відповідальністю «Авіста Груп»;
+Scheme: UA-EDR
+_______________________________________
+Offer: 362ce361cf7046eb4e0b105680f76351
+Suppliers:
+
+	Identifier: Id: 24095427;
+Legal name: Товариство з обмеженою відповідальністю "В.М.";
+Scheme: UA-EDR
+_______________________________________

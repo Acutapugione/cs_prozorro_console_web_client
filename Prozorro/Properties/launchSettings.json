@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Prozorro": {
+      "commandName": "Project",
+      "commandLineArgs": "seeddata",
+      "sqlDebugging": true
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}

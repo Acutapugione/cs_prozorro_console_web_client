@@ -22,7 +22,8 @@ public class ProductDTO : BaseItemDTO
     public string Description { get; set; }
 
     [DataMember(Name = "classification")]
-    public Classification Classification { get; set; }
+    public virtual Classification Classification { get; set; }
+
 
     [DataMember(Name = "identifier")]
     public Identifier Identifier { get; set; }

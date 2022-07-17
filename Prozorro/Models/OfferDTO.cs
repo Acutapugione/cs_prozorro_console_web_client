@@ -30,4 +30,6 @@ public class OfferDTO : BaseItemDTO
 
     [DataMember(Name = "owner")]
     public string Owner { get; set; }
+
+    
 }

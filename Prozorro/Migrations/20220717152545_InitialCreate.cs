@@ -12,10 +12,10 @@ namespace Prozorro.Migrations
                 name: "Brand",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Uri = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Uri = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -23,29 +23,29 @@ namespace Prozorro.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Classification",
+                name: "Classifications",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Scheme = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Scheme = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Classification", x => x.Id);
+                    table.PrimaryKey("PK_Classifications", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ContactPoint",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telephone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FaxNumber = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Telephone = table.Column<string>(type: "TEXT", nullable: false),
+                    Url = table.Column<string>(type: "TEXT", nullable: true),
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    FaxNumber = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,10 +56,10 @@ namespace Prozorro.Migrations
                 name: "MinOrderValue",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Currency = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Amount = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Currency = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,9 +70,9 @@ namespace Prozorro.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -83,10 +83,10 @@ namespace Prozorro.Migrations
                 name: "Unit",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Code = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -97,11 +97,11 @@ namespace Prozorro.Migrations
                 name: "Value",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Currency = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ValueAddetTaxIncluded = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Amount = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Currency = table.Column<string>(type: "TEXT", nullable: false),
+                    ValueAddetTaxIncluded = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -109,28 +109,28 @@ namespace Prozorro.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Offers",
+                name: "OfferDTOs",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    RelatedProduct = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    ValueId = table.Column<int>(type: "int", nullable: false),
-                    MinOrderValueId = table.Column<int>(type: "int", nullable: true),
-                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateModified = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    RelatedProduct = table.Column<string>(type: "TEXT", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    ValueId = table.Column<int>(type: "INTEGER", nullable: false),
+                    MinOrderValueId = table.Column<int>(type: "INTEGER", nullable: true),
+                    Comment = table.Column<string>(type: "TEXT", nullable: false),
+                    Owner = table.Column<string>(type: "TEXT", nullable: false),
+                    DateModified = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Offers", x => x.Id);
+                    table.PrimaryKey("PK_OfferDTOs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Offers_MinOrderValue_MinOrderValueId",
+                        name: "FK_OfferDTOs_MinOrderValue_MinOrderValueId",
                         column: x => x.MinOrderValueId,
                         principalTable: "MinOrderValue",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Offers_Value_ValueId",
+                        name: "FK_OfferDTOs_Value_ValueId",
                         column: x => x.ValueId,
                         principalTable: "Value",
                         principalColumn: "Id",
@@ -138,36 +138,37 @@ namespace Prozorro.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Profiles",
+                name: "ProfileDTOs",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ClassificationId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RelatedCategory = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UnitId = table.Column<int>(type: "int", nullable: false),
-                    ValueId = table.Column<int>(type: "int", nullable: false),
-                    DateModified = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    ClassificationId = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Owner = table.Column<string>(type: "TEXT", nullable: false),
+                    RelatedCategory = table.Column<string>(type: "TEXT", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: false),
+                    UnitId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ValueId = table.Column<int>(type: "INTEGER", nullable: false),
+                    DateModified = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Profiles", x => x.Id);
+                    table.PrimaryKey("PK_ProfileDTOs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Profiles_Classification_ClassificationId",
+                        name: "FK_ProfileDTOs_Classifications_ClassificationId",
                         column: x => x.ClassificationId,
-                        principalTable: "Classification",
-                        principalColumn: "Id");
+                        principalTable: "Classifications",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Profiles_Unit_UnitId",
+                        name: "FK_ProfileDTOs_Unit_UnitId",
                         column: x => x.UnitId,
                         principalTable: "Unit",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Profiles_Value_ValueId",
+                        name: "FK_ProfileDTOs_Value_ValueId",
                         column: x => x.ValueId,
                         principalTable: "Value",
                         principalColumn: "Id",
@@ -178,23 +179,23 @@ namespace Prozorro.Migrations
                 name: "BaseAddress",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CountryName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Locality = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Region = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PostalCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StreetAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    OfferDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CountryName = table.Column<string>(type: "TEXT", nullable: false),
+                    Locality = table.Column<string>(type: "TEXT", nullable: false),
+                    Region = table.Column<string>(type: "TEXT", nullable: false),
+                    Discriminator = table.Column<string>(type: "TEXT", nullable: false),
+                    PostalCode = table.Column<string>(type: "TEXT", nullable: true),
+                    StreetAddress = table.Column<string>(type: "TEXT", nullable: true),
+                    OfferDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BaseAddress", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BaseAddress_Offers_OfferDTOId",
+                        name: "FK_BaseAddress_OfferDTOs_OfferDTOId",
                         column: x => x.OfferDTOId,
-                        principalTable: "Offers",
+                        principalTable: "OfferDTOs",
                         principalColumn: "Id");
                 });
 
@@ -202,18 +203,18 @@ namespace Prozorro.Migrations
                 name: "Сriterion",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProfileDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: false),
+                    ProfileDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Сriterion", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Сriterion_Profiles_ProfileDTOId",
+                        name: "FK_Сriterion_ProfileDTOs_ProfileDTOId",
                         column: x => x.ProfileDTOId,
-                        principalTable: "Profiles",
+                        principalTable: "ProfileDTOs",
                         principalColumn: "Id");
                 });
 
@@ -221,9 +222,9 @@ namespace Prozorro.Migrations
                 name: "RequirementGroup",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    СriterionId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    СriterionId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -239,13 +240,13 @@ namespace Prozorro.Migrations
                 name: "Requirement",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    DataType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UnitId = table.Column<int>(type: "int", nullable: true),
-                    MinValue = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    RequirementGroupId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    DataType = table.Column<string>(type: "TEXT", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    UnitId = table.Column<int>(type: "INTEGER", nullable: true),
+                    MinValue = table.Column<decimal>(type: "TEXT", nullable: true),
+                    RequirementGroupId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -263,33 +264,11 @@ namespace Prozorro.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ClassificationId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProcuringEntityId = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateModified = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Categories_Classification_ClassificationId",
-                        column: x => x.ClassificationId,
-                        principalTable: "Classification",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Category",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    VendorDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    VendorDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -297,17 +276,39 @@ namespace Prozorro.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CategoryDTOs",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    ClassificationId = table.Column<string>(type: "TEXT", nullable: true),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    ProcuringEntityId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: false),
+                    DateModified = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CategoryDTOs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CategoryDTOs_Classifications_ClassificationId",
+                        column: x => x.ClassificationId,
+                        principalTable: "Classifications",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Document",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Hash = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Format = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DatePublished = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VendorDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    DateModified = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Hash = table.Column<string>(type: "TEXT", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: false),
+                    Format = table.Column<string>(type: "TEXT", nullable: false),
+                    Url = table.Column<string>(type: "TEXT", nullable: false),
+                    DatePublished = table.Column<string>(type: "TEXT", nullable: false),
+                    VendorDTOId = table.Column<string>(type: "TEXT", nullable: true),
+                    DateModified = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -315,30 +316,30 @@ namespace Prozorro.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Identifier",
+                name: "Identifiers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    LegalName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Scheme = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProductDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    LegalName = table.Column<string>(type: "TEXT", nullable: false),
+                    Scheme = table.Column<string>(type: "TEXT", nullable: false),
+                    ProductDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Identifier", x => x.Id);
+                    table.PrimaryKey("PK_Identifiers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ProcuringEntity",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AddressId = table.Column<int>(type: "int", nullable: false),
-                    ContactPointId = table.Column<int>(type: "int", nullable: false),
-                    IdentifierId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Kind = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    AddressId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ContactPointId = table.Column<int>(type: "INTEGER", nullable: false),
+                    IdentifierId = table.Column<string>(type: "TEXT", nullable: false),
+                    Kind = table.Column<int>(type: "INTEGER", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -356,49 +357,52 @@ namespace Prozorro.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProcuringEntity_Identifier_IdentifierId",
+                        name: "FK_ProcuringEntity_Identifiers_IdentifierId",
                         column: x => x.IdentifierId,
-                        principalTable: "Identifier",
-                        principalColumn: "Id");
+                        principalTable: "Identifiers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Products",
+                name: "ProductDTOs",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RelatedProfile = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClassificationId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    IdentifierId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    BrandId = table.Column<int>(type: "int", nullable: false),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateModified = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: false),
+                    RelatedProfile = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    ClassificationId = table.Column<string>(type: "TEXT", nullable: false),
+                    IdentifierId = table.Column<string>(type: "TEXT", nullable: false),
+                    BrandId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ProductId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    Owner = table.Column<string>(type: "TEXT", nullable: false),
+                    DateModified = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.PrimaryKey("PK_ProductDTOs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Products_Brand_BrandId",
+                        name: "FK_ProductDTOs_Brand_BrandId",
                         column: x => x.BrandId,
                         principalTable: "Brand",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Products_Classification_ClassificationId",
+                        name: "FK_ProductDTOs_Classifications_ClassificationId",
                         column: x => x.ClassificationId,
-                        principalTable: "Classification",
-                        principalColumn: "Id");
+                        principalTable: "Classifications",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Products_Identifier_IdentifierId",
+                        name: "FK_ProductDTOs_Identifiers_IdentifierId",
                         column: x => x.IdentifierId,
-                        principalTable: "Identifier",
-                        principalColumn: "Id");
+                        principalTable: "Identifiers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Products_Product_ProductId",
+                        name: "FK_ProductDTOs_Product_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Product",
                         principalColumn: "Id",
@@ -409,14 +413,14 @@ namespace Prozorro.Migrations
                 name: "Supplier",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Scale = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AddressId = table.Column<int>(type: "int", nullable: false),
-                    ContactPointId = table.Column<int>(type: "int", nullable: false),
-                    IdentifierId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    OfferDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Scale = table.Column<string>(type: "TEXT", nullable: true),
+                    AddressId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ContactPointId = table.Column<int>(type: "INTEGER", nullable: false),
+                    IdentifierId = table.Column<string>(type: "TEXT", nullable: false),
+                    OfferDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -434,14 +438,15 @@ namespace Prozorro.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Supplier_Identifier_IdentifierId",
+                        name: "FK_Supplier_Identifiers_IdentifierId",
                         column: x => x.IdentifierId,
-                        principalTable: "Identifier",
-                        principalColumn: "Id");
+                        principalTable: "Identifiers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Supplier_Offers_OfferDTOId",
+                        name: "FK_Supplier_OfferDTOs_OfferDTOId",
                         column: x => x.OfferDTOId,
-                        principalTable: "Offers",
+                        principalTable: "OfferDTOs",
                         principalColumn: "Id");
                 });
 
@@ -449,12 +454,12 @@ namespace Prozorro.Migrations
                 name: "Vendor",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AddressId = table.Column<int>(type: "int", nullable: false),
-                    ContactPointId = table.Column<int>(type: "int", nullable: false),
-                    IdentifierId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    AddressId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ContactPointId = table.Column<int>(type: "INTEGER", nullable: false),
+                    IdentifierId = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -472,9 +477,9 @@ namespace Prozorro.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Vendor_Identifier_IdentifierId",
+                        name: "FK_Vendor_Identifiers_IdentifierId",
                         column: x => x.IdentifierId,
-                        principalTable: "Identifier",
+                        principalTable: "Identifiers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -483,31 +488,31 @@ namespace Prozorro.Migrations
                 name: "Image",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Sizes = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    ProductDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    ProfileDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Sizes = table.Column<string>(type: "TEXT", nullable: false),
+                    Url = table.Column<string>(type: "TEXT", nullable: false),
+                    CategoryDTOId = table.Column<string>(type: "TEXT", nullable: true),
+                    ProductDTOId = table.Column<string>(type: "TEXT", nullable: true),
+                    ProfileDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Image", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Image_Categories_CategoryDTOId",
+                        name: "FK_Image_CategoryDTOs_CategoryDTOId",
                         column: x => x.CategoryDTOId,
-                        principalTable: "Categories",
+                        principalTable: "CategoryDTOs",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Image_Products_ProductDTOId",
+                        name: "FK_Image_ProductDTOs_ProductDTOId",
                         column: x => x.ProductDTOId,
-                        principalTable: "Products",
+                        principalTable: "ProductDTOs",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Image_Profiles_ProfileDTOId",
+                        name: "FK_Image_ProfileDTOs_ProfileDTOId",
                         column: x => x.ProfileDTOId,
-                        principalTable: "Profiles",
+                        principalTable: "ProfileDTOs",
                         principalColumn: "Id");
                 });
 
@@ -515,39 +520,39 @@ namespace Prozorro.Migrations
                 name: "RequirementResponse",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Requirement = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Value = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProductDTOId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Requirement = table.Column<string>(type: "TEXT", nullable: false),
+                    Value = table.Column<string>(type: "TEXT", nullable: false),
+                    ProductDTOId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_RequirementResponse", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_RequirementResponse_Products_ProductDTOId",
+                        name: "FK_RequirementResponse_ProductDTOs_ProductDTOId",
                         column: x => x.ProductDTOId,
-                        principalTable: "Products",
+                        principalTable: "ProductDTOs",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Vendors",
+                name: "VendorDTOs",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    VendorId = table.Column<int>(type: "int", nullable: false),
-                    IsActivated = table.Column<bool>(type: "bit", nullable: false),
-                    DateCreated = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateModified = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    VendorId = table.Column<int>(type: "INTEGER", nullable: false),
+                    IsActivated = table.Column<bool>(type: "INTEGER", nullable: false),
+                    DateCreated = table.Column<string>(type: "TEXT", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    Owner = table.Column<string>(type: "TEXT", nullable: false),
+                    DateModified = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vendors", x => x.Id);
+                    table.PrimaryKey("PK_VendorDTOs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Vendors_Vendor_VendorId",
+                        name: "FK_VendorDTOs_Vendor_VendorId",
                         column: x => x.VendorId,
                         principalTable: "Vendor",
                         principalColumn: "Id",
@@ -565,19 +570,19 @@ namespace Prozorro.Migrations
                 column: "OfferDTOId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Categories_ClassificationId",
-                table: "Categories",
-                column: "ClassificationId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Categories_ProcuringEntityId",
-                table: "Categories",
-                column: "ProcuringEntityId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Category_VendorDTOId",
                 table: "Category",
                 column: "VendorDTOId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CategoryDTOs_ClassificationId",
+                table: "CategoryDTOs",
+                column: "ClassificationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CategoryDTOs_ProcuringEntityId",
+                table: "CategoryDTOs",
+                column: "ProcuringEntityId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Document_VendorDTOId",
@@ -585,8 +590,8 @@ namespace Prozorro.Migrations
                 column: "VendorDTOId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Identifier_ProductDTOId",
-                table: "Identifier",
+                name: "IX_Identifiers_ProductDTOId",
+                table: "Identifiers",
                 column: "ProductDTOId");
 
             migrationBuilder.CreateIndex(
@@ -605,13 +610,13 @@ namespace Prozorro.Migrations
                 column: "ProfileDTOId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Offers_MinOrderValueId",
-                table: "Offers",
+                name: "IX_OfferDTOs_MinOrderValueId",
+                table: "OfferDTOs",
                 column: "MinOrderValueId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Offers_ValueId",
-                table: "Offers",
+                name: "IX_OfferDTOs_ValueId",
+                table: "OfferDTOs",
                 column: "ValueId");
 
             migrationBuilder.CreateIndex(
@@ -630,38 +635,38 @@ namespace Prozorro.Migrations
                 column: "IdentifierId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_BrandId",
-                table: "Products",
+                name: "IX_ProductDTOs_BrandId",
+                table: "ProductDTOs",
                 column: "BrandId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_ClassificationId",
-                table: "Products",
+                name: "IX_ProductDTOs_ClassificationId",
+                table: "ProductDTOs",
                 column: "ClassificationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_IdentifierId",
-                table: "Products",
+                name: "IX_ProductDTOs_IdentifierId",
+                table: "ProductDTOs",
                 column: "IdentifierId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_ProductId",
-                table: "Products",
+                name: "IX_ProductDTOs_ProductId",
+                table: "ProductDTOs",
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Profiles_ClassificationId",
-                table: "Profiles",
+                name: "IX_ProfileDTOs_ClassificationId",
+                table: "ProfileDTOs",
                 column: "ClassificationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Profiles_UnitId",
-                table: "Profiles",
+                name: "IX_ProfileDTOs_UnitId",
+                table: "ProfileDTOs",
                 column: "UnitId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Profiles_ValueId",
-                table: "Profiles",
+                name: "IX_ProfileDTOs_ValueId",
+                table: "ProfileDTOs",
                 column: "ValueId");
 
             migrationBuilder.CreateIndex(
@@ -720,49 +725,49 @@ namespace Prozorro.Migrations
                 column: "IdentifierId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Vendors_VendorId",
-                table: "Vendors",
+                name: "IX_VendorDTOs_VendorId",
+                table: "VendorDTOs",
                 column: "VendorId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Categories_ProcuringEntity_ProcuringEntityId",
-                table: "Categories",
+                name: "FK_Category_VendorDTOs_VendorDTOId",
+                table: "Category",
+                column: "VendorDTOId",
+                principalTable: "VendorDTOs",
+                principalColumn: "Id");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_CategoryDTOs_ProcuringEntity_ProcuringEntityId",
+                table: "CategoryDTOs",
                 column: "ProcuringEntityId",
                 principalTable: "ProcuringEntity",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Category_Vendors_VendorDTOId",
-                table: "Category",
-                column: "VendorDTOId",
-                principalTable: "Vendors",
-                principalColumn: "Id");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Document_Vendors_VendorDTOId",
+                name: "FK_Document_VendorDTOs_VendorDTOId",
                 table: "Document",
                 column: "VendorDTOId",
-                principalTable: "Vendors",
+                principalTable: "VendorDTOs",
                 principalColumn: "Id");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Identifier_Products_ProductDTOId",
-                table: "Identifier",
+                name: "FK_Identifiers_ProductDTOs_ProductDTOId",
+                table: "Identifiers",
                 column: "ProductDTOId",
-                principalTable: "Products",
+                principalTable: "ProductDTOs",
                 principalColumn: "Id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Products_Classification_ClassificationId",
-                table: "Products");
+                name: "FK_ProductDTOs_Classifications_ClassificationId",
+                table: "ProductDTOs");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Identifier_Products_ProductDTOId",
-                table: "Identifier");
+                name: "FK_Identifiers_ProductDTOs_ProductDTOId",
+                table: "Identifiers");
 
             migrationBuilder.DropTable(
                 name: "Category");
@@ -783,10 +788,10 @@ namespace Prozorro.Migrations
                 name: "Supplier");
 
             migrationBuilder.DropTable(
-                name: "Vendors");
+                name: "VendorDTOs");
 
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "CategoryDTOs");
 
             migrationBuilder.DropTable(
                 name: "RequirementGroup");
@@ -807,10 +812,10 @@ namespace Prozorro.Migrations
                 name: "ContactPoint");
 
             migrationBuilder.DropTable(
-                name: "Profiles");
+                name: "ProfileDTOs");
 
             migrationBuilder.DropTable(
-                name: "Offers");
+                name: "OfferDTOs");
 
             migrationBuilder.DropTable(
                 name: "Unit");
@@ -822,16 +827,16 @@ namespace Prozorro.Migrations
                 name: "Value");
 
             migrationBuilder.DropTable(
-                name: "Classification");
+                name: "Classifications");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "ProductDTOs");
 
             migrationBuilder.DropTable(
                 name: "Brand");
 
             migrationBuilder.DropTable(
-                name: "Identifier");
+                name: "Identifiers");
 
             migrationBuilder.DropTable(
                 name: "Product");

@@ -21,6 +21,6 @@ public class Supplier
     [DataMember(Name = "contactPoint")]
     public ContactPoint ContactPoint { get; set; }
     [DataMember(Name = "identifier")] 
-    public Identifier Identifier { get; set; }
+    public virtual Identifier Identifier { get; set; }
 }
 

@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Prozorro.Data;
+using WebProzorro.Data;
 
 #nullable disable
 
-namespace Prozorro.Migrations
+namespace WebProzorro.Migrations
 {
-    [DbContext(typeof(ProzorroContext))]
-    [Migration("20220715183458_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(WebProzorroContext))]
+    [Migration("20220717190238_InitalCreate")]
+    partial class InitalCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -56,7 +56,7 @@ namespace Prozorro.Migrations
 
                     b.HasIndex("ProcuringEntityId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("CategoryDTOs", (string)null);
                 });
 
             modelBuilder.Entity("Prozorro.Models.Internals.Сriterion", b =>
@@ -599,7 +599,7 @@ namespace Prozorro.Migrations
 
                     b.HasIndex("ValueId");
 
-                    b.ToTable("Offers");
+                    b.ToTable("OfferDTOs", (string)null);
                 });
 
             modelBuilder.Entity("Prozorro.Models.ProductDTO", b =>
@@ -652,7 +652,7 @@ namespace Prozorro.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Products");
+                    b.ToTable("ProductDTOs", (string)null);
                 });
 
             modelBuilder.Entity("Prozorro.Models.ProfileDTO", b =>
@@ -700,7 +700,7 @@ namespace Prozorro.Migrations
 
                     b.HasIndex("ValueId");
 
-                    b.ToTable("Profiles");
+                    b.ToTable("ProfileDTOs", (string)null);
                 });
 
             modelBuilder.Entity("Prozorro.Models.VendorDTO", b =>
@@ -733,7 +733,7 @@ namespace Prozorro.Migrations
 
                     b.HasIndex("VendorId");
 
-                    b.ToTable("Vendors");
+                    b.ToTable("VendorDTOs", (string)null);
                 });
 
             modelBuilder.Entity("Prozorro.Models.Internals.DeliveryAddress", b =>
@@ -757,7 +757,7 @@ namespace Prozorro.Migrations
             modelBuilder.Entity("Prozorro.Models.CategoryDTO", b =>
                 {
                     b.HasOne("Prozorro.Models.Internals.Classification", "Classification")
-                        .WithMany()
+                        .WithMany("CategoryDTOs")
                         .HasForeignKey("ClassificationId");
 
                     b.HasOne("Prozorro.Models.Internals.ProcuringEntity", "ProcuringEntity")
@@ -881,7 +881,7 @@ namespace Prozorro.Migrations
                         .IsRequired();
 
                     b.HasOne("Prozorro.Models.Internals.Identifier", "Identifier")
-                        .WithMany()
+                        .WithMany("Suppliers")
                         .HasForeignKey("IdentifierId");
 
                     b.HasOne("Prozorro.Models.OfferDTO", null)
@@ -948,7 +948,7 @@ namespace Prozorro.Migrations
                         .IsRequired();
 
                     b.HasOne("Prozorro.Models.Internals.Classification", "Classification")
-                        .WithMany()
+                        .WithMany("ProductDTOs")
                         .HasForeignKey("ClassificationId");
 
                     b.HasOne("Prozorro.Models.Internals.Identifier", "Identifier")
@@ -973,7 +973,7 @@ namespace Prozorro.Migrations
             modelBuilder.Entity("Prozorro.Models.ProfileDTO", b =>
                 {
                     b.HasOne("Prozorro.Models.Internals.Classification", "Classification")
-                        .WithMany()
+                        .WithMany("ProfileDTOs")
                         .HasForeignKey("ClassificationId");
 
                     b.HasOne("Prozorro.Models.Internals.Unit", "Unit")
@@ -1021,6 +1021,20 @@ namespace Prozorro.Migrations
             modelBuilder.Entity("Prozorro.Models.Internals.Сriterion", b =>
                 {
                     b.Navigation("RequirementGroups");
+                });
+
+            modelBuilder.Entity("Prozorro.Models.Internals.Classification", b =>
+                {
+                    b.Navigation("CategoryDTOs");
+
+                    b.Navigation("ProductDTOs");
+
+                    b.Navigation("ProfileDTOs");
+                });
+
+            modelBuilder.Entity("Prozorro.Models.Internals.Identifier", b =>
+                {
+                    b.Navigation("Suppliers");
                 });
 
             modelBuilder.Entity("Prozorro.Models.Internals.RequirementGroup", b =>

@@ -13,7 +13,8 @@ namespace Prozorro.Models;
 public class CategoryDTO : BaseItemDTO
 {
     [DataMember(Name = "classification")]
-    public Classification Classification { get; set; }
+    public virtual Classification Classification { get; set; }
+
 
     [DataMember(Name = "description")]
     public string Description { get; set; }
