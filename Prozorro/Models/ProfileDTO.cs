@@ -8,7 +8,8 @@ namespace Prozorro.Models;
 public class ProfileDTO : BaseItemDTO
 {
     [DataMember(Name = "classification")]
-    public Classification Classification { get; set; }
+    public virtual Classification Classification { get; set; }
+
 
     [DataMember(Name = "criteria")]
     public List<Сriterion> Criteria { get; set; } = new();

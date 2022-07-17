@@ -110,7 +110,19 @@ namespace Prozorro.ClientExtentions
                 cntr++;
                 if (cntr % 10 == 0 && _isDebugging == true)
                 {
-                    Console.Clear();
+                    try
+                    {
+                        Console.Clear();
+                    }
+                    catch
+                    {
+                        for (int i = 0; i < 45; i++)
+                        {
+                            Console.Write('*');
+                        }
+                        Console.WriteLine();
+                    }
+
                 }
                 if (cntr >= count)
                 {
@@ -125,6 +137,30 @@ namespace Prozorro.ClientExtentions
         }
 
 
+
+        public async Task<HashSet<T>> LoadItems<T>(string typeName = "products")
+        {
+            try
+            {
+                HashSet<BaseItemDTO> indexes = await this
+                    .LoadIndexesByType(
+                    typeName: typeName,
+                    count: 100);
+
+                HashSet<T> items = await this
+                    .LoadObjectsByType<T>(
+                    indexes,
+                    typeName: typeName,
+                    count: 100);
+
+                return items;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return new();
+            }
+        }
 
 
     }

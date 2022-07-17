@@ -13,5 +13,16 @@ namespace Prozorro.Models.Internals
 
         [DataMember(Name = "scheme")]
         public string Scheme { get; set; }
+
+        public virtual List<ProfileDTO> ProfileDTOs { get; set; }
+
+        public virtual List<CategoryDTO> CategoryDTOs { get; set; }
+
+        public virtual List<ProductDTO> ProductDTOs { get; set; }
+
+        public override string? ToString()
+        {
+            return $"Id: {Id};\nDescription: {Description};\nScheme: {Scheme}";
+        }
     }
 }

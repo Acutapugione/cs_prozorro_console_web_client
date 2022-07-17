@@ -7,5 +7,7 @@ namespace Prozorro.Models.Internals
     {
         [DataMember(Name = "id")]
         public string Id { get; set; }
+
+        
     }
 }
