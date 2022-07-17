@@ -35,6 +35,11 @@ namespace Prozorro.ClientExtentions
             }
         }
 
+        internal void SetBaseUrl(string url)
+        {
+            _client.BaseAddress = new Uri(url);
+        }
+
         private async Task<T> GetBaseContainerDTOAsync<T>(string type = "/api/offers", string param = "")
         {
             return await _client.GetAsync<T>(type, param);

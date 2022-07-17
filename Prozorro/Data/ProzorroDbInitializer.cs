@@ -15,32 +15,33 @@ public class ProzorroDbInitializer
         _executor = executor ?? new ClientExecutor(Models.Enums.Mode.Dev, "https://catalog-api-staging.prozorro.gov.ua");
     }
 
-    public async Task SeedDataAsync()
+    public async Task SeedDataAsync(string url = "")
     {
+        if(!string.IsNullOrEmpty(url)) _executor = new ClientExecutor(baseUrl:url);
         if (!_context.OfferDTOs.Any())
         {
             var items = await _executor.LoadItems<OfferDTO>( "offers");
-            _context.OfferDTOs.UpsertRange(items);
+            _context.OfferDTOs.UpsertRange(items); await _context.SaveChangesAsync();
         }
         if (!_context.CategoryDTOs.Any())
         {
             var items = await _executor.LoadItems<CategoryDTO>("categories");
-            _context.CategoryDTOs.UpsertRange(items);
+            _context.CategoryDTOs.UpsertRange(items); await _context.SaveChangesAsync();
         }
         if (!_context.ProductDTOs.Any())
         {
             var items = await _executor.LoadItems<ProductDTO>("products");
-            _context.ProductDTOs.UpsertRange(items);
+            _context.ProductDTOs.UpsertRange(items); await _context.SaveChangesAsync();
         }
         if (!_context.ProfileDTOs.Any())
         {
             var items = await _executor.LoadItems<ProfileDTO>("profiles");
-            _context.ProfileDTOs.UpsertRange(items);
+            _context.ProfileDTOs.UpsertRange(items); await _context.SaveChangesAsync();
         }
         if (!_context.VendorDTOs.Any())
         {
             var items = await _executor.LoadItems<VendorDTO>("vendors");
-            _context.VendorDTOs.UpsertRange(items);
+            _context.VendorDTOs.UpsertRange(items); await _context.SaveChangesAsync();
         }
         await _context.SaveChangesAsync();
     }
