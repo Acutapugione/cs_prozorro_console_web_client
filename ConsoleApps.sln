@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prozorro", "Prozorro\Prozorro.csproj", "{352A33EB-5DBF-4F23-8B07-EBCAD01B6162}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProzorro", "WebProzorro\WebProzorro.csproj", "{0C2A15DF-67EF-41C8-941B-B14C0072004D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebProzorro", "WebProzorro\WebProzorro.csproj", "{0DC5B218-DBD2-4D2E-8F8E-A3C7B77BDA7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,13 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{352A33EB-5DBF-4F23-8B07-EBCAD01B6162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{352A33EB-5DBF-4F23-8B07-EBCAD01B6162}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{352A33EB-5DBF-4F23-8B07-EBCAD01B6162}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C2A15DF-67EF-41C8-941B-B14C0072004D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C2A15DF-67EF-41C8-941B-B14C0072004D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C2A15DF-67EF-41C8-941B-B14C0072004D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C2A15DF-67EF-41C8-941B-B14C0072004D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC5B218-DBD2-4D2E-8F8E-A3C7B77BDA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC5B218-DBD2-4D2E-8F8E-A3C7B77BDA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC5B218-DBD2-4D2E-8F8E-A3C7B77BDA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC5B218-DBD2-4D2E-8F8E-A3C7B77BDA7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

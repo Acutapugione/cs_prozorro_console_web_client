@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using Prozorro.Data;
 using Microsoft.Extensions.DependencyInjection;
 using WebProzorro.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<WebProzorroContext>(options =>
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("WebProzorroContext") ?? throw new InvalidOperationException("Connection string 'WebProzorroContext' not found.")));
+//    options.UseSqlServer(
+//    builder.Configuration.GetConnectionString("WebProzorroContext") ?? throw new InvalidOperationException("Connection string 'WebProzorroContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -13,16 +13,16 @@ builder.Services.AddDbContext<WebProzorroContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("WebProzorroContext"))
     );
-builder.Services.AddTransient<ProzorroWebDbInitializer>();
+builder.Services.AddTransient<DbInitializer>();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var initializer = new ProzorroWebDbInitializer(
+    var initializer = new DbInitializer(
         scope.ServiceProvider.GetService<WebProzorroContext>(),
-        new Prozorro.ClientExtentions.ClientExecutor(
-            Prozorro.Models.Enums.Mode.Dev, 
+        new WebProzorro.ClientExtentions.ClientExecutor(
+            WebProzorro.Models.Enums.Mode.Dev, 
             "https://catalog-api-staging.prozorro.gov.ua")
         );
     await initializer.SeedDataAsync();
@@ -47,6 +47,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=DVendors}/{action=Index}/{id?}");
 
 app.Run();

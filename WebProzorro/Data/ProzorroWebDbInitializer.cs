@@ -1,15 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Prozorro.ClientExtentions;
-using Prozorro.Models;
-using Prozorro.Models.Enums;
+using System.Linq;
+using WebProzorro.ClientExtentions;
+using WebProzorro.Models;
+using WebProzorro.Models.Enums;
+using WebProzorro.Models.Internals;
+
 namespace WebProzorro.Data
 {
-    public class ProzorroWebDbInitializer
+    public class DbInitializer
     {
         private WebProzorroContext _context;
         private ClientExecutor _executor;
 
-        public ProzorroWebDbInitializer(WebProzorroContext context = null, ClientExecutor executor = null)
+        public DbInitializer(WebProzorroContext context = null, ClientExecutor executor = null)
         {
             _context = context;//?? new WebProzorroContext();
             _executor = executor ?? new ClientExecutor(Mode.Dev, "https://catalog-api-staging.prozorro.gov.ua");
@@ -27,24 +30,76 @@ namespace WebProzorro.Data
             if (!_context.CategoryDTOs.Any())
             {
                 var items = await _executor.LoadItems<CategoryDTO>("categories");
-                _context.CategoryDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+                _context.CategoryDTOs.AddRangeAsync(items); await _context.SaveChangesAsync();
             }
             if (!_context.ProductDTOs.Any())
             {
                 var items = await _executor.LoadItems<ProductDTO>("products");
-                _context.ProductDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+                _context.ProductDTOs.AddRangeAsync(items); await _context.SaveChangesAsync();
             }
             if (!_context.ProfileDTOs.Any())
             {
                 var items = await _executor.LoadItems<ProfileDTO>("profiles");
-                _context.ProfileDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+                _context.ProfileDTOs.AddRangeAsync(items); await _context.SaveChangesAsync();
             }
             if (!_context.VendorDTOs.Any())
             {
                 var items = await _executor.LoadItems<VendorDTO>("vendors");
-                _context.VendorDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+                foreach (var item in items)
+                {
+                    //Identifiers
+                    try  
+                    {
+                        await _context.Identifiers.AddAsync(item.Vendor.Identifier);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch 
+                    {
+                        
+                    }
+                    //Categories
+                    try
+                    {
+                        await _context.Categories.AddRangeAsync(item.Categories);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch 
+                    {
+
+                    }
+                    //Documents
+                    try
+                    {
+                        await _context.Documents.AddRangeAsync(item.Documents);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch 
+                    {
+             
+                    }
+                    //Vendors
+                    try
+                    {
+                        await _context.Vendors.AddAsync(item.Vendor);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch
+                    { 
+
+                    }
+                    //VendorDTOs
+                    try
+                    {
+                        await _context.VendorDTOs.AddAsync(item);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch
+                    {
+
+                    }
+                }
             }
-            await _context.SaveChangesAsync();
+            
         }
         //public async Task Seed(ProzorroContext context)
         //{

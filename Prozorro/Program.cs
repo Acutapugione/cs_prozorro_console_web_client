@@ -1,124 +1,56 @@
-﻿
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Prozorro.ClientExtentions;
-using Prozorro.Data;
-using Prozorro.Models;
-using Prozorro.Models.Enums;
-using Prozorro.Models.Implementations;
-using Prozorro.Models.Interfaces;
+﻿using Prozorro.Data;
 using System.Text;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Prozorro
+namespace Prozorro;
+
+class Program
 {
-    class Program
+    static async Task Main(string[] args)
     {
-        static async Task Main(string[] args)
-        {
-            //CreateHostBuilder(args).Build().Run();
-            using IHost host = Host.CreateDefaultBuilder(args)
-                .ConfigureServices(ConfigureServices)
-                .Build();
-            SeedData(host);
+        var builder = WebApplication
+            .CreateBuilder(args);
+        builder.Services
+            .AddDbContext<ProzorroContext>(options =>
+                options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+            )
+            .AddTransient<ProzorroDbInitializer>()
+            .AddControllersWithViews();
 
-            var context = host.Services.GetService<ProzorroContext>();
-            foreach (var item in await context.OfferDTOs.ToListAsync())
-            {
-                Console.WriteLine(item.Comment);
-            }
-        }
-        public static void SeedData(IHost app)
-        {
-            var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+        var app = builder.Build();
 
-            using (var scope = scopedFactory.CreateScope())
-            {
-                Console.OutputEncoding = Encoding.UTF8;
-                Console.WriteLine($"Seeding data...");
-                var service = scope.ServiceProvider.GetService<ProzorroDbInitializer>();
-                service.SeedDataAsync("https://catalog-api-staging.prozorro.gov.ua").Wait();
-            }
-        }
-        public static void ConfigureServices(IServiceCollection services)
+        using (var scope = app.Services.CreateScope())
         {
-            services.AddDbContext<ProzorroContext>()
-                  .AddTransient<ProzorroDbInitializer>();
+            var services = scope.ServiceProvider;
+            var initializer = new ProzorroDbInitializer(
+                scope.ServiceProvider.GetService<ProzorroContext>(),
+                new Prozorro.ClientExtentions.ClientExecutor(
+                    Prozorro.Models.Enums.Mode.Dev,
+                    "https://catalog-api-staging.prozorro.gov.ua")
+                );
+            await initializer.SeedDataAsync();
         }
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-             Host.CreateDefaultBuilder(args)
-                 .ConfigureWebHost(
-                     webHost => webHost
-                         .UseKestrel(kestrelOptions => { kestrelOptions.ListenAnyIP(5005); })
-                         .ConfigureServices(ConfigureServices)
-                         .Configure(app => app
-                            .Run(
-                                async context =>
-                                {
-                                    var numberOfFoos = 5;
-                                    // Resolve IFooService here
-                                    var prozorroContext = context.RequestServices.GetRequiredService<ProzorroContext>();
-                                    await context.Response.WriteAsync(numberOfFoos.ToString());
-                                    //foreach (var item in prozorroContext.OfferDTOs)
-                                    //{
-                                    //await context.Response.WriteAsync(item.RelatedProduct);
-                                    //
-                                    //}
+        // Configure the HTTP request pipeline.
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Home/Error");
+            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            app.UseHsts();
+        }
 
-                                }
-                            )));
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseAuthorization();
+
+        app.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}");
+
+        app.Run();
 
     }
-
 }
-//    
-
-//if (args.Length == 1 && args[0].ToLower() == "seeddata")
-//    SeedData(host);
-//else
-//{
-//    ExemplifyScoping(host.Services, "Scope 1");
-//    ExemplifyScoping(host.Services, "Scope 2");
-//}
-//}
-
-//await host.RunAsync();
-
-
-
-
-
-//static void ExemplifyScoping(IServiceProvider services, string scope)
-//{
-//    using IServiceScope serviceScope = services.CreateScope();
-//    IServiceProvider provider = serviceScope.ServiceProvider;
-
-//    OperationLogger logger = provider.GetRequiredService<OperationLogger>();
-//    logger.LogOperations($"{scope}-Call 1 .GetRequiredService<OperationLogger>()");
-
-//    Console.WriteLine("...");
-
-//    logger = provider.GetRequiredService<OperationLogger>();
-//    logger.LogOperations($"{scope}-Call 2 .GetRequiredService<OperationLogger>()");
-
-//    Console.WriteLine();
-//}
-
-
-
-//public static IHostBuilder CreateHostBuilder(string[] args) =>
-//  Host.CreateDefaultBuilder(args)
-//      .ConfigureWebHost(
-//          webHost => webHost
-//              .UseKestrel(kestrelOptions => { kestrelOptions.ListenAnyIP(5005); })
-//              .Configure(app => app
-//                  .Run(
-//                      async context =>
-//                      {
-//                          await context.Response.WriteAsync("Hello World!");
-//                      }
-//                  )));

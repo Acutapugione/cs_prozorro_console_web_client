@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Prozorro.ClientExtentions;
+﻿using Prozorro.ClientExtentions;
 using Prozorro.Models;
 
 namespace Prozorro.Data;
@@ -18,30 +17,38 @@ public class ProzorroDbInitializer
     public async Task SeedDataAsync(string url = "")
     {
         if(!string.IsNullOrEmpty(url)) _executor = new ClientExecutor(baseUrl:url);
+        _context.Database.EnsureCreated();
         if (!_context.OfferDTOs.Any())
         {
             var items = await _executor.LoadItems<OfferDTO>( "offers");
-            _context.OfferDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+            //_context.OfferDTOs.AddRange( items ); 
+            items.ToList().ForEach(s => _context.OfferDTOs.Add(s));
+            _context.SaveChanges();
+            //await _context.SaveChangesAsync();
         }
         if (!_context.CategoryDTOs.Any())
         {
             var items = await _executor.LoadItems<CategoryDTO>("categories");
-            _context.CategoryDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+            _context.CategoryDTOs.AddRange( items ); 
+            await _context.SaveChangesAsync();
         }
         if (!_context.ProductDTOs.Any())
         {
             var items = await _executor.LoadItems<ProductDTO>("products");
-            _context.ProductDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+            _context.ProductDTOs.AddRange( items ); 
+            await _context.SaveChangesAsync();
         }
         if (!_context.ProfileDTOs.Any())
         {
             var items = await _executor.LoadItems<ProfileDTO>("profiles");
-            _context.ProfileDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+            _context.ProfileDTOs.AddRange( items ); 
+            await _context.SaveChangesAsync();
         }
         if (!_context.VendorDTOs.Any())
         {
             var items = await _executor.LoadItems<VendorDTO>("vendors");
-            _context.VendorDTOs.UpsertRange(items); await _context.SaveChangesAsync();
+            _context.VendorDTOs.AddRange( items ); 
+            await _context.SaveChangesAsync();
         }
         await _context.SaveChangesAsync();
     }

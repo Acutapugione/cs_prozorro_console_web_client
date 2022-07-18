@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace Prozorro.ClientExtentions;
+namespace WebProzorro.ClientExtentions;
 
 public class RestClient : HttpClient
 {
@@ -26,7 +26,7 @@ public class RestClient : HttpClient
 
         DefaultRequestHeaders.Clear();
         DefaultRequestHeaders.CacheControl = new CacheControlHeaderValue() { NoCache = true };
-        
+
         //DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token.AccessToken);
 
         using (HttpResponseMessage response = await GetAsync(Utils.AddQueryString(_baseUri + url, query)))
@@ -40,13 +40,13 @@ public class RestClient : HttpClient
         }
     }
 
-    public async Task<T> GetAsync<T>(string url, string param = "", bool isDebugging = false )
+    public async Task<T> GetAsync<T>(string url, string param = "", bool isDebugging = false)
     {
         //await SetTokenAsync();
 
         DefaultRequestHeaders.Clear();
         DefaultRequestHeaders.CacheControl = new CacheControlHeaderValue() { NoCache = true };
-        
+
         //DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token.AccessToken);
 
         using (HttpResponseMessage response = await GetAsync(_baseUri + url))
@@ -66,17 +66,17 @@ public class RestClient : HttpClient
                     }
                     catch (Exception ex)
                     {
-                        
+
                         if (isDebugging) Console.WriteLine(ex);
                         else
                         {
                             throw;
                         }
                     }
-                    
-                    
+
+
                 }
-                
+
                 return await response.Content.ReadAsAsync<T>();
             }
 
