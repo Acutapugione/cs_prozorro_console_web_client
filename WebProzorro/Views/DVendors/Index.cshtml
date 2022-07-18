@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebProzorro.Models.VendorDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="neon-btn" asp-action="Create">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Create New
+    </a>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActivated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Owner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateModified)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActivated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Owner)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateModified)
+                </td>
+                <td>
+                    <a class="neon-btn" asp-action="Edit" asp-route-id="@item.Id">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>Edit
+                    </a> |
+                    <a class="neon-btn" asp-action="Details" asp-route-id="@item.Id">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>Details
+                    </a> |
+                    <a class="neon-btn" asp-action="Delete" asp-route-id="@item.Id">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
